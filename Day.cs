@@ -10,9 +10,26 @@ namespace LemonadeStand_3DayStarter
     {
         //member variables
         string weather;
+        int day;
+        int nextDay;
+
         
         //constructor
 
         //member methods
+        public int ChangeDay()
+        {
+            int firstDay = 0;
+            Console.WriteLine("Good Luck");
+            if (firstDay >= 7)
+            {
+                nextDay++;
+                Console.WriteLine("Day" + nextDay);
+
+            }
+            return nextDay;
+            
+            
+        }
     }
 }

@@ -15,5 +15,9 @@ namespace LemonadeStand_3DayStarter
         // constructor 
 
         // member methods 
+        public void RunGame()
+        {
+
+        }
     }
 }

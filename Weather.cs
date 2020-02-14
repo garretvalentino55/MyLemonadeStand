@@ -11,9 +11,18 @@ namespace LemonadeStand_3DayStarter
         //member variables 
         string condition;
         List<string> weatherConditions;
-
+        int temperature;
         //constructor 
 
         // member methods
+
+        public int WeatherTemperature(Random random) // single responsibility
+        {
+            random.Next(50,100);
+           int temperature = random.Next(50, 100);
+            return temperature;
+        }
+        public string 
+
     }
 }
