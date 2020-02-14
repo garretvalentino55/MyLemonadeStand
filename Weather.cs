@@ -13,16 +13,30 @@ namespace LemonadeStand_3DayStarter
         List<string> weatherConditions;
         int temperature;
         //constructor 
-
+        public Weather()
+        {
+            weatherConditions = new List<string>();
+            AddWeather();
+        }
         // member methods
-
+        private void AddWeather()
+        {
+            weatherConditions.Add("Sunny");
+            weatherConditions.Add("Cloudy");
+            weatherConditions.Add("Rainy");
+        }
         public int WeatherTemperature(Random random) // single responsibility
         {
             random.Next(50,100);
            int temperature = random.Next(50, 100);
             return temperature;
         }
-        public string 
+        public string DecideWeather()
+        {
+            dailyWeather = random.Next(1, 3);
+            condition = weatherConditions[dailyWeather];
+            return condition;
+        }
 
     }
 }
