@@ -28,10 +28,10 @@ namespace LemonadeStand_3DayStarter
         public int WeatherTemperature(Random random) // single responsibility
         {
             random.Next(50,100);
-           int temperature = random.Next(50, 100);
+            int temperature = random.Next(50, 100);
             return temperature;
         }
-        public string DecideWeather()
+        public string DecideWeather(Random random)
         {
             dailyWeather = random.Next(1, 3);
             condition = weatherConditions[dailyWeather];

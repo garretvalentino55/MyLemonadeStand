@@ -14,7 +14,7 @@ namespace LemonadeStand_3DayStarter
         int numberOfIceCubes;
 
         //constructor
-
+        seceret = new Recipe
 
 
         //member methods
