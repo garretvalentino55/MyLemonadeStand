@@ -12,6 +12,7 @@ namespace LemonadeStand_3DayStarter
         string condition;
         List<string> weatherConditions;
         int temperature;
+        int dailyWeather;
         //constructor 
         public Weather()
         {
@@ -28,7 +29,7 @@ namespace LemonadeStand_3DayStarter
         public int WeatherTemperature(Random random) // single responsibility
         {
             random.Next(50,100);
-            int temperature = random.Next(50, 100);
+            int temperature = random.Next(50, 102);
             return temperature;
         }
         public string DecideWeather(Random random)

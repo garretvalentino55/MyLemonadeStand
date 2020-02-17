@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand_3DayStarter
 {
-    class Recipe
+    public class Recipe
     {
         //member variables
         int numberofLemons;
@@ -14,7 +14,7 @@ namespace LemonadeStand_3DayStarter
         int numberOfIceCubes;
 
         //constructor
-        seceret = new Recipe
+        seceretRecipe = new Recipe();
 
 
         //member methods

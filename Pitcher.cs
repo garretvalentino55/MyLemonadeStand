@@ -18,13 +18,6 @@ namespace LemonadeStand_3DayStarter
 
 
         //member methods
-        public int WhenSold() 
-        {
-            for (int i = 10; i > 0; --i)
-            {
-
-            }
-        }
 
     }
 }
