@@ -6,15 +6,20 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand_3DayStarter
 {
-    class Day
+    public class Day
     {
         //member variables
-        string weather;
+       public Weather weather;
         int day;
         int nextDay;
-
-        
+        List<Customer> customers;
         //constructor
+        public Day(Random random)
+        {
+            weather = new Weather(random);
+
+        }
+
 
         //member methods
         public int ChangeDay()

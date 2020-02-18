@@ -26,29 +26,17 @@ namespace LemonadeStand_3DayStarter
         }
 
         // member methods (CAN DO)
-        public string RefillPitcher()
+        public void FillPitcher()
         {
-            int WhenSold()
+            pitcher = new Pitcher();
+        }
+
+        public void CheckInventory()
+        {
+            if(pitcher.cupsLeftInPitcher == 0)
             {
-                if (cupsLeftInPitcher > 0)
-                {
-                    for (int i = 10; i > 0; --i)
-                    {
-                        Console.WriteLine(i + " cups are left");
-                        return i;
-                    }
-                }
-                else
-                {
-                    cupsLeftInPitcher = 0;
-                    Pitcher pitcher = new Pitcher();
-                    Convert.ToInt32.pitcher= new Pitcher();
-                    return pitcher;
-                }
-
-
+                FillPitcher();
             }
-
         }
         public int BuyFromStore()
         {

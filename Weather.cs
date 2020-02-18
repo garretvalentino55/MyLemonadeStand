@@ -6,18 +6,20 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand_3DayStarter
 {
-    class Weather
+    public class Weather
     {
         //member variables 
-        string condition;
+       public  string condition;
         List<string> weatherConditions;
-        int temperature;
-        int dailyWeather;
+       public int temperature;
         //constructor 
-        public Weather()
+        public Weather(Random random)
         {
             weatherConditions = new List<string>();
             AddWeather();
+            SetWeatherTemperature(random);
+            DecideWeather(random);
+
         }
         // member methods
         private void AddWeather()
@@ -25,18 +27,18 @@ namespace LemonadeStand_3DayStarter
             weatherConditions.Add("Sunny");
             weatherConditions.Add("Cloudy");
             weatherConditions.Add("Rainy");
+            
         }
-        public int WeatherTemperature(Random random) // single responsibility
+        public void SetWeatherTemperature(Random random) // single responsibility
         {
-            random.Next(50,100);
-            int temperature = random.Next(50, 102);
-            return temperature;
+           
+            temperature = random.Next(50, 102);
+            
         }
-        public string DecideWeather(Random random)
+        public void DecideWeather(Random random)
         {
-            dailyWeather = random.Next(1, 3);
-            condition = weatherConditions[dailyWeather];
-            return condition;
+            int chosenCondition = random.Next(0, weatherConditions.Count);
+            condition = weatherConditions[chosenCondition];
         }
 
     }
