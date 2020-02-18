@@ -30,7 +30,6 @@ namespace LemonadeStand_3DayStarter
             ChooseGameMode();
             DisplayWeather();
             BuyIngredientsFromTheStore();
-            DisplayInventory();
             ChooseRecipe();
             SetPrice();
             RunDay();
@@ -59,7 +58,7 @@ namespace LemonadeStand_3DayStarter
 
         public void ChooseRecipe()
         {
-           Recipe.
+           
         }
         public void SetPrice()
         {
