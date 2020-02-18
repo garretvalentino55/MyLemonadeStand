@@ -18,24 +18,24 @@ namespace LemonadeStand_3DayStarter
         
 
         //member methods
-        public int BuyLemonade()
-        {
-            Random random = new Random();
-            int chanceToBuyLemonade = random.Next(1, 100);
-            if (chanceToBuyLemonade >= 50)
-            {
-                money = 10;
-                int payForLemonade = money -= int costOfLemonade;
-                return costOfLemonade;
+        ////public int BuyLemonade()
+        ////{
+        ////    Random random = new Random();
+        ////    int chanceToBuyLemonade = random.Next(1, 100);
+        ////    if (chanceToBuyLemonade >= 50)
+        ////    {
+        ////        money = 10;
+        ////        int payForLemonade = money -= int costOfLemonade;
+        ////        return costOfLemonade;
                 
-            }
-            if (AddWeather(weatherConditions.Add("Sunny")+ WeatherTemperature >= 75))
-            {
-                chanceToBuyLemonade = random.Next(75, 100);
+        ////    }
+        ////    if (AddWeather(weatherConditions.Add("Sunny")+ WeatherTemperature >= 75))
+        ////    {
+        ////        chanceToBuyLemonade = random.Next(75, 100);
 
-            }
+        ////    }
 
-        }
+        ////}
 
 
 

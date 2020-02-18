@@ -11,27 +11,31 @@ namespace LemonadeStand_3DayStarter
         //member variables 
         Day currentDay;
         Random random;
-
+        Store store;
+        Player player;
         // constructor 
         public Game()
         {
+            store = new Store();
             random = new Random();
             currentDay = new Day(random);
+            player = new Player();
+            recipe = new Recipe();
         }
         // member methods 
         public void RunGame()
         {
-            //1 Display Rules
+            
             UserInterface.DisplayRules();
             ChooseGameMode();
             DisplayWeather();
             BuyIngredientsFromTheStore();
             DisplayInventory();
-            MakeRecipe();
+            ChooseRecipe();
             SetPrice();
             RunDay();
             DisplayDailyResults();
-            
+
         }
         public void ChooseGameMode()
         {
@@ -43,19 +47,21 @@ namespace LemonadeStand_3DayStarter
         {
             Console.WriteLine("The Forcast For Today Is " + currentDay.weather.condition + "And The Temperature Is " + currentDay.weather.temperature);
         }
-        public string BuyIngredientsFromTheStore()
+        public void BuyIngredientsFromTheStore()
         {
-
+            store.SellCups(player);
+            store.SellIceCubes(player);
+            store.SellLemons(player);
+            store.SellSugarCubes(player);
+            UserInterface.DisplayInventory(player);
+            Console.WriteLine();
         }
-        public string DisplayInventory()
+
+        public void ChooseRecipe()
         {
-
+           Recipe.
         }
-        public string MakeRecipe()
-        {
-
-        }
-        public int SetPrice()
+        public void SetPrice()
         {
 
         }
@@ -63,7 +69,7 @@ namespace LemonadeStand_3DayStarter
         {
 
         }
-        public string DisplayDailyResults()
+        public void DisplayDailyResults()
         {
 
         }

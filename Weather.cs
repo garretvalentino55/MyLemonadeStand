@@ -35,7 +35,7 @@ namespace LemonadeStand_3DayStarter
             temperature = random.Next(50, 102);
             
         }
-        public void DecideWeather(Random random)
+        public void DecideWeather(Random random)// open closed principle
         {
             int chosenCondition = random.Next(0, weatherConditions.Count);
             condition = weatherConditions[chosenCondition];

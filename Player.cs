@@ -29,24 +29,25 @@ namespace LemonadeStand_3DayStarter
         public void FillPitcher()
         {
             pitcher = new Pitcher();
-        }
-
-        public void CheckInventory()
-        {
-            if(pitcher.cupsLeftInPitcher == 0)
-            {
-                FillPitcher();
-            }
-        }
-        public int BuyFromStore()
-        {
+            seceretRecipe.SetRecipe();
             
         }
-        public string MakeSeceretRecipe()
+
+     
+        public void MakeRecipe()
         {
+            inventory.lemons.RemoveRange(0, seceretRecipe.numberofLemons);
+            inventory.sugarCubes.RemoveRange(0, seceretRecipe.numberofSugarCubes);
+            inventory.iceCubes.RemoveRange(0, seceretRecipe.numberOfIceCubes);
 
         }
+        public void CheckInventory()
+        {
+            if (pitcher.cupsLeftInPitcher == 0)
+            {
+                FillPitcher();
 
-
+            }
+        }
     }
 }

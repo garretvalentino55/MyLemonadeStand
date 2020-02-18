@@ -10,14 +10,21 @@ namespace LemonadeStand_3DayStarter
     {
         //member Variables
         public int cupsLeftInPitcher = 10;
+        public string recipe;
         
 
         //constructor
-        public Pitcher pitcher = new Pitcher();
+
+        public Pitcher()
+        {
+            Pitcher pitcher = new Pitcher();
+            Recipe recipe = new Recipe();
 
 
+        }
 
         //member methods
+        
 
     }
 }

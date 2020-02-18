@@ -42,5 +42,9 @@ namespace LemonadeStand_3DayStarter
 
             return quantityOfItem;
         }
+        public static void DisplayInventory(Player player)
+        {
+            Console.WriteLine($"you have {player.inventory.lemons.Count} Lemons");
+        }
     }
 }
