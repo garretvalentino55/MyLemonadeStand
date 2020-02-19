@@ -12,7 +12,7 @@ namespace LemonadeStand_3DayStarter
         public int numberofLemons;
         public int numberofSugarCubes;
         public int numberOfIceCubes;
-        string defaultInventory;
+        public double pricePerCup;
 
         //constructor
         public Recipe()
@@ -20,6 +20,7 @@ namespace LemonadeStand_3DayStarter
             numberofLemons = 4;
             numberofSugarCubes = 4;
             numberOfIceCubes = 4;
+            pricePerCup = .50;
             
         }
 
@@ -33,6 +34,11 @@ namespace LemonadeStand_3DayStarter
             Console.WriteLine("How Many Ice Cubes Would You Like To Add" );
             numberOfIceCubes = Convert.ToInt32(Console.ReadLine());
 
+        }
+        public void SetPrice()
+        {
+            Console.WriteLine("what Would You Like To Charge Your Customers For Each Cup Of Lemonade");
+            pricePerCup = Convert.ToDouble(Console.ReadLine());
         }
 
 

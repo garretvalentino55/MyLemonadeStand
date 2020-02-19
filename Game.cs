@@ -31,7 +31,7 @@ namespace LemonadeStand_3DayStarter
             DisplayWeather();
             BuyIngredientsFromTheStore();
             ChooseRecipe();
-            SetPrice();
+            SellLemonade();
             RunDay();
             UserInterface.DisplayDailyResults();
 
@@ -59,13 +59,15 @@ namespace LemonadeStand_3DayStarter
         public void ChooseRecipe()
         {
             Console.WriteLine("Now Its Time To Make Your Recipe" + player.seceretRecipe);
+            player.seceretRecipe.SetRecipe();
             player.MakeRecipe();
             player.CheckInventory();
+            player.seceretRecipe.SetPrice();
 
         }
-        public void SetPrice()
+        public void SellLemonade()
         {
-
+           
         }
         public Day RunDay()
         {

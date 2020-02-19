@@ -10,32 +10,46 @@ namespace LemonadeStand_3DayStarter
     {
         //member variables
         List<string> names;
-        string name;
-        public int money;
+        int temperaturePreference;
+        double pricePreference;
+        public double money;
         
         //constructor
-        Customer customer = new Customer();
-        
+        public Customer()
+        {
+            List<string> names = new List<string>();
+            names.Add("Mary");
+            names.Add("James");
+            names.Add("Beth");
+            names.Add("Sue");
+            names.Add("Frank");
+            names.Add("Jeff");
+            names.Add("Tony");
+            names.Add("Kyle");
+            names.Add("Luke");
+            names.Add("Lori");
+            names.Add("Betty");
+            names.Add("Carl");
+        }
+        public void SetPref(Random random)
+        {
+            temperaturePreference = random.Next(50, 105);
+            pricePreference = random.NextDouble() * 1;
+            foreach(string name in names)
+            {
 
+            }
+
+        }
         //member methods
-        ////public int BuyLemonade()
-        ////{
-        ////    Random random = new Random();
-        ////    int chanceToBuyLemonade = random.Next(1, 100);
-        ////    if (chanceToBuyLemonade >= 50)
-        ////    {
-        ////        money = 10;
-        ////        int payForLemonade = money -= int costOfLemonade;
-        ////        return costOfLemonade;
-                
-        ////    }
-        ////    if (AddWeather(weatherConditions.Add("Sunny")+ WeatherTemperature >= 75))
-        ////    {
-        ////        chanceToBuyLemonade = random.Next(75, 100);
-
-        ////    }
-
-        ////}
+        public bool BuyLemonade(Recipe recipe, Weather weather)
+        {
+            
+            if(weather.temperature > temperaturePreference && pricePreference > recipe.pricePerCup)
+            {
+                return true;
+            }
+        }
 
 
 
