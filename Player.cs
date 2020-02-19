@@ -26,19 +26,17 @@ namespace LemonadeStand_3DayStarter
         }
 
         // member methods (CAN DO)
-        public void FillPitcher()
-        {
-            pitcher = new Pitcher();
-            seceretRecipe.SetRecipe();
-            
-        }
-
-     
         public void MakeRecipe()
         {
             inventory.lemons.RemoveRange(0, seceretRecipe.numberofLemons);
             inventory.sugarCubes.RemoveRange(0, seceretRecipe.numberofSugarCubes);
             inventory.iceCubes.RemoveRange(0, seceretRecipe.numberOfIceCubes);
+
+        }
+        public void FillPitcher()
+        {
+            pitcher = new Pitcher();
+            MakeRecipe();
 
         }
         public void CheckInventory()

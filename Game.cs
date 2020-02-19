@@ -20,7 +20,7 @@ namespace LemonadeStand_3DayStarter
             random = new Random();
             currentDay = new Day(random);
             player = new Player();
-            recipe = new Recipe();
+           
         }
         // member methods 
         public void RunGame()
@@ -33,7 +33,7 @@ namespace LemonadeStand_3DayStarter
             ChooseRecipe();
             SetPrice();
             RunDay();
-            DisplayDailyResults();
+            UserInterface.DisplayDailyResults();
 
         }
         public void ChooseGameMode()
@@ -58,7 +58,10 @@ namespace LemonadeStand_3DayStarter
 
         public void ChooseRecipe()
         {
-           
+            Console.WriteLine("Now Its Time To Make Your Recipe" + player.seceretRecipe);
+            player.MakeRecipe();
+            player.CheckInventory();
+
         }
         public void SetPrice()
         {
@@ -68,9 +71,6 @@ namespace LemonadeStand_3DayStarter
         {
 
         }
-        public void DisplayDailyResults()
-        {
-
-        }
+       
     }
 }

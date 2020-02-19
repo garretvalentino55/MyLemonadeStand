@@ -20,6 +20,7 @@ namespace LemonadeStand_3DayStarter
             numberofLemons = 4;
             numberofSugarCubes = 4;
             numberOfIceCubes = 4;
+            
         }
 
         //member methods
