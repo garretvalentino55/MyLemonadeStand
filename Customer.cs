@@ -13,10 +13,12 @@ namespace LemonadeStand_3DayStarter
         int temperaturePreference;
         double pricePreference;
         public double money;
+        string name;
         
         //constructor
-        public Customer()
+        public Customer(Random rng)
         {
+            
             List<string> names = new List<string>();
             names.Add("Mary");
             names.Add("James");
@@ -30,15 +32,13 @@ namespace LemonadeStand_3DayStarter
             names.Add("Lori");
             names.Add("Betty");
             names.Add("Carl");
+            SetPref(rng);
         }
         public void SetPref(Random random)
         {
             temperaturePreference = random.Next(50, 105);
             pricePreference = random.NextDouble() * 1;
-            foreach(string name in names)
-            {
-
-            }
+            name = names[random.Next(names.Count)];
 
         }
         //member methods
@@ -48,6 +48,10 @@ namespace LemonadeStand_3DayStarter
             if(weather.temperature > temperaturePreference && pricePreference > recipe.pricePerCup)
             {
                 return true;
+            }
+            else
+            {
+                return false;
             }
         }
 

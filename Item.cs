@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand_3DayStarter
 {
-    abstract class Item
+    abstract public class Item
     {
         // member variables (HAS A)
         public string name;

@@ -25,8 +25,9 @@ namespace LemonadeStand_3DayStarter
             Console.WriteLine("                                          If You Run Out Of Money You Wont Be Able To Play Anymore                                ");
             Console.WriteLine("         Also If You Run Out Of Money You Wont Be Able To Sell The Rest Of The Day So It Is Important to Check Your Inventory     ");
             Console.ReadLine();
+            Console.WriteLine("                                                            What Is Your Name                                                     ");
+            Console.ReadLine();
         }
-
         public static int GetNumberOfItems(string itemsToGet)
         {
             bool userInputIsAnInteger = false;
@@ -50,5 +51,6 @@ namespace LemonadeStand_3DayStarter
         {
 
         }
+
     }
 }

@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand_3DayStarter
 {
-    class Player
+    public class Player
     {
         // member variables (HAS A)
         public Inventory inventory;
         public Wallet wallet;
         public Pitcher pitcher;
         public Recipe seceretRecipe;
-        string name;
         int cupsLeftInPitcher;
 
 
@@ -37,6 +36,7 @@ namespace LemonadeStand_3DayStarter
         {
             pitcher = new Pitcher();
             MakeRecipe();
+            cupsLeftInPitcher--;
 
         }
         public void CheckInventory()
