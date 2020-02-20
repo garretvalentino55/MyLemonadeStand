@@ -31,7 +31,9 @@ namespace LemonadeStand_3DayStarter
             ChooseGameMode();
             for (int i = 0; i < days.Count ; i++)
             {
-                days[i].RunDay();
+                days[i].RunDay(random, player);
+                BuyIngredientsFromTheStore();
+                ChooseRecipe();
 
             }
             UserInterface.DisplayDailyResults();
@@ -65,14 +67,15 @@ namespace LemonadeStand_3DayStarter
         {
             for (int i = 0; i < 7; i++)
             {
-                days.Add (new Day(random));
+                days.Add(new Day(random));
             }
+            
+        }
+        
+        
 
-        }
-        public Day RunDay()
-        {
            
-        }
+        
        
     }
 }

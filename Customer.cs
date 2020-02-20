@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand_3DayStarter
 {
-    class Customer
+    public class Customer
     {
         //member variables
         List<string> names;
@@ -18,7 +18,7 @@ namespace LemonadeStand_3DayStarter
         //constructor
         public Customer(Random rng)
         {
-            
+            Customer name = new Customer(rng);
             List<string> names = new List<string>();
             names.Add("Mary");
             names.Add("James");
