@@ -29,13 +29,13 @@ namespace LemonadeStand_3DayStarter
             weatherConditions.Add("Rainy");
             
         }
-        public void SetWeatherTemperature(Random random) // single responsibility
+        public void SetWeatherTemperature(Random random) // single responsibility because the only thing this is doing is choosing a weather temperature
         {
            
             temperature = random.Next(50, 102);
             
         }
-        public void DecideWeather(Random random)// open closed principle
+        public void DecideWeather(Random random)// open closed principle becasue you can add weather conditions to the list but the code for decide weather doenst have to be changed 
         {
             int chosenCondition = random.Next(0, weatherConditions.Count);
             condition = weatherConditions[chosenCondition];

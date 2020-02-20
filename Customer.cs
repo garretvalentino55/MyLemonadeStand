@@ -18,7 +18,6 @@ namespace LemonadeStand_3DayStarter
         //constructor
         public Customer(Random rng)
         {
-            Customer name = new Customer(rng);
             List<string> names = new List<string>();
             names.Add("Mary");
             names.Add("James");
